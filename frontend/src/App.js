@@ -1,27 +1,26 @@
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
+
+import Navbar from './components/Navbar';
 
 import './App.css';
 
 function App() {
   return (
-    <div className="app">
+    <Router>
       {/* Navbar */}
-      {/* Sidedrawer */}
-      {/* Backdrop */}
+      <Navbar />
       <main>
         <Switch>
-          <Route exact path="/" component={HomeScreen}/>
-          <Route exact path="/product/:id" component={ProductScreen}/>
-          <Route exact path="/cart" component={CartScreen}/>
+          <Route exact path="/"  />
+          <Route exact path="/product/:id"/>
+          <Route exact path="/cart"/>
         </Switch>
       </main>
-
-      {/* Home Screen */}
-
-      {/* Product Screen */}
-
-      {/* Card Screen */}
-    </div>
+    </Router>
   );
 }
 
