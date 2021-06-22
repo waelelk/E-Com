@@ -4,24 +4,24 @@ import {
   Route
 } from "react-router-dom";
 
-import Navbar from './components/Navbar';
+import Home from './pages/Home'
 
 import './App.css';
 
 function App() {
   return (
     <Router>
-      {/* Navbar */}
-      <Navbar />
+      {/* Navbar */}  
       <main>
         <Switch>
-          <Route exact path="/"  />
-          <Route exact path="/product/:id"/>
-          <Route exact path="/cart"/>
+          {/* Home */} 
+          <Route to='/' component={Home} />
         </Switch>
       </main>
     </Router>
+    
   );
+  
 }
 
 export default App;
